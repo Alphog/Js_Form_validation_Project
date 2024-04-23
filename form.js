@@ -1,4 +1,5 @@
 const calorieCounter = document.getElementById('calorie-counter');
+const calorieCounter = document.getElementById('calorie-counter');
 const budgetNumberInput = document.getElementById('budget');
 const entryDropdown = document.getElementById('entry-dropdown');
 const addEntryButton = document.getElementById('add-entry');
@@ -18,7 +19,7 @@ function isInvalidInput(str) {
 
 function addEntry() {
   const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
-  const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length;
+  const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1;
   const HTMLString = `
   <label for="${entryDropdown.value}-${entryNumber}-name">Entry ${entryNumber} Name</label>
   <input type="text" id="${entryDropdown.value}-${entryNumber}-name" placeholder="Name" />
@@ -29,5 +30,9 @@ function addEntry() {
     id="${entryDropdown.value}-${entryNumber}-calories"
     placeholder="Calories"
   />`;
-
+  targetInputContainer.insertAdjacentHTML('beforeend', HTMLString);
 }
+
+
+
+addEntryButton.addEventListener("click", addEntry);
