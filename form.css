@@ -3,7 +3,7 @@
     --dark-blue: #0a0a23;
     --fcc-blue: #1b1b32;
     --light-yellow: #fecc4c;
-    --dark-yellow: #feac32;
+    --dark-yellow: #feac31;
     --light-pink: #ffadad;
     --dark-red: #850000;
     --light-green: #acd157;
@@ -11,7 +11,7 @@
   
   body {
     font-family: "Lato", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     background-color: var(--fcc-blue);
     color: var(--light-grey);
   }
@@ -45,7 +45,7 @@
     cursor: pointer;
     text-decoration: none;
     background-color: var(--light-yellow);
-    border: 2px solid var(--dark-yellow);
+    border: 3px solid var(--dark-yellow);
   }
   
   button,
